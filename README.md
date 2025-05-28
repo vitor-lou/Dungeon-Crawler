@@ -1,40 +1,75 @@
-# Dungeon Crawler (Jogo em C)
+🗺️ Dungeon Crawler – A Jornada do Herói
+Um jogo de aventura e puzzle em terminal, desenvolvido em C, onde você embarca em uma jornada por calabouços sombrios, enfrentando monstros, armadilhas e desafios, enquanto busca a chave mágica para escapar.
 
-🎮 Um jogo de aventura/puzzle em C, baseado em mapas de texto.  
-O objetivo é coletar a chave, desviar de monstros e armadilhas, e abrir a porta para vencer cada fase.
+📖 História do Jogo
+Há muito tempo, um vilarejo foi tomado por forças sombrias.
+Antigas catacumbas escondem mistérios, segredos e perigos.
+Você, um aventureiro destemido, é a única esperança para restaurar a paz.
 
-## 📜 Descrição
+Seu objetivo é simples... na teoria:
+⚔️ Explorar os calabouços, pegar a chave mágica e abrir a porta antes que os monstros o alcancem.
 
-Este é um jogo estilo **Dungeon Crawler** em modo texto, desenvolvido em linguagem **C**.  
-Possui um tutorial e 3 fases. O jogador precisa se movimentar pelo mapa, pegar a chave (`@`), desviar de monstros e armadilhas, e abrir a porta (`D`) para completar a fase.
+Mas não se engane. Pelo caminho, você encontrará armadilhas mortais, monstros imprevisíveis e corredores cheios de segredos.
 
-### 🧠 Mecânicas do jogo:
+🕹️ Regras do Jogo
+🎯 Objetivo
+🗝️ Pegue a chave (@)
 
-- `&` → Jogador  
-- `P` → NPC (Dá dicas)  
-- `@` → Chave  
-- `D` → Porta fechada  
-- `=` → Porta aberta  
-- `O` → Botão que ativa passagem secreta (remove paredes `-`)  
-- `#` → Armadilha de espinhos (perde 1 tentativa)  
-- `>` → Teleporte (leva a outro ponto com `>`)  
-- `X` → Monstro que anda de forma aleatória  
-- `V` → Monstro perseguidor (segue o jogador, move a cada 2 turnos)
+🚪 Abra a porta (D)
 
-O jogador tem **3 tentativas** no total, **válidas para todas as fases**.
+💀 Sobreviva aos desafios com 3 tentativas no total, válidas para todas as fases
 
----
+🔍 Elementos do Mapa
+Símbolo	Função
+&	Você (jogador)
+P	NPC (fornece dicas quando interagido)
+@	Chave (necessária para abrir portas)
+D	Porta fechada (só abre com chave)
+=	Porta aberta (quando já possui a chave)
+O	Botão (ativa passagens secretas, remove -)
+#	Armadilha de espinhos (perde 1 tentativa)
+>	Teleporte (leva para outro >)
+X	Monstro que anda de forma aleatória
+V	Monstro perseguidor (move na direção do jogador a cada 2 turnos)
 
-## 🚀 Como rodar o jogo
+⚠️ Perigos
+☠️ Armadilhas (#) → perde 1 tentativa ao pisar.
 
-### ✅ Pré-requisitos:
+👾 Monstros (X e V) → perde 1 tentativa se te alcançarem.
 
-- Compilador C (GCC, clang, etc.)
-- Terminal (Windows, Linux ou Mac)
+❌ Se perder todas as tentativas (3 no total), volta ao menu principal.
 
-### 🏗️ Compilar:
+🎮 Controles
+Tecla	Ação
+W	Mover para cima
+A	Mover para esquerda
+S	Mover para baixo
+D	Mover para direita
+I	Interagir (com NPC, botão, chave ou porta)
 
-No terminal, execute:
+🔧 Como Instalar e Executar
+✅ Pré-requisitos
+Compilador C instalado (gcc, clang ou outro)
 
-```bash
-gcc dungeon_crawler.c -o dungeon_crawler
+Um terminal (funciona no Windows, Linux e macOS)
+
+🏗️ Compilar
+Navegue até a pasta do projeto e execute:
+
+bash
+Copiar
+Editar
+gcc src/dungeon_crawler.c -o dungeon_crawler
+▶️ Rodar o jogo
+No Linux/macOS:
+
+bash
+Copiar
+Editar
+./dungeon_crawler
+No Windows:
+
+bash
+Copiar
+Editar
+dungeon_crawler.exe
