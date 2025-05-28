@@ -1,75 +1,119 @@
-🗺️ Dungeon Crawler – A Jornada do Herói
-Um jogo de aventura e puzzle em terminal, desenvolvido em C, onde você embarca em uma jornada por calabouços sombrios, enfrentando monstros, armadilhas e desafios, enquanto busca a chave mágica para escapar.
 
-📖 História do Jogo
-Há muito tempo, um vilarejo foi tomado por forças sombrias.
-Antigas catacumbas escondem mistérios, segredos e perigos.
-Você, um aventureiro destemido, é a única esperança para restaurar a paz.
+# 🗺️ Dungeon Crawler – A Jornada do Herói
 
-Seu objetivo é simples... na teoria:
-⚔️ Explorar os calabouços, pegar a chave mágica e abrir a porta antes que os monstros o alcancem.
+Um jogo de **aventura e puzzle em terminal**, desenvolvido em **C**, onde você enfrenta calabouços, monstros e armadilhas para escapar vitorioso.
 
-Mas não se engane. Pelo caminho, você encontrará armadilhas mortais, monstros imprevisíveis e corredores cheios de segredos.
+---
 
-🕹️ Regras do Jogo
-🎯 Objetivo
-🗝️ Pegue a chave (@)
+## 📖 História do Jogo
 
-🚪 Abra a porta (D)
+> Em um vilarejo esquecido, antigos calabouços guardam mistérios, armadilhas e criaturas sombrias.  
+> Você, um aventureiro destemido, deve atravessar esses perigos, encontrar a chave mágica e escapar pela porta antes que os monstros o alcancem.  
+> Sua coragem definirá o futuro desse lugar!
 
-💀 Sobreviva aos desafios com 3 tentativas no total, válidas para todas as fases
+---
 
-🔍 Elementos do Mapa
-Símbolo	Função
-&	Você (jogador)
-P	NPC (fornece dicas quando interagido)
-@	Chave (necessária para abrir portas)
-D	Porta fechada (só abre com chave)
-=	Porta aberta (quando já possui a chave)
-O	Botão (ativa passagens secretas, remove -)
-#	Armadilha de espinhos (perde 1 tentativa)
->	Teleporte (leva para outro >)
-X	Monstro que anda de forma aleatória
-V	Monstro perseguidor (move na direção do jogador a cada 2 turnos)
+## 🎯 Objetivo
 
-⚠️ Perigos
-☠️ Armadilhas (#) → perde 1 tentativa ao pisar.
+- 🗝️ **Coletar a chave** (`@`)
+- 🚪 **Abrir a porta** (`D`)
+- 💀 **Sobreviver aos perigos** com **3 tentativas no total**, válidas para todas as fases
 
-👾 Monstros (X e V) → perde 1 tentativa se te alcançarem.
+---
 
-❌ Se perder todas as tentativas (3 no total), volta ao menu principal.
+## 🕹️ Controles
 
-🎮 Controles
-Tecla	Ação
-W	Mover para cima
-A	Mover para esquerda
-S	Mover para baixo
-D	Mover para direita
-I	Interagir (com NPC, botão, chave ou porta)
+| Tecla | Ação                       |
+|-------|-----------------------------|
+| `W`   | Mover para cima             |
+| `A`   | Mover para esquerda         |
+| `S`   | Mover para baixo            |
+| `D`   | Mover para direita          |
+| `I`   | **Interagir** (com NPC, botão, chave, porta) |
 
-🔧 Como Instalar e Executar
-✅ Pré-requisitos
-Compilador C instalado (gcc, clang ou outro)
+---
 
-Um terminal (funciona no Windows, Linux e macOS)
+## 🧠 Elementos do Mapa
 
-🏗️ Compilar
-Navegue até a pasta do projeto e execute:
+| Símbolo | Função                                          |
+|---------|-------------------------------------------------|
+| `&`     | Jogador                                         |
+| `P`     | NPC (dá dicas)                                  |
+| `@`     | Chave (necessária para abrir a porta)           |
+| `D`     | Porta fechada                                   |
+| `=`     | Porta aberta                                    |
+| `O`     | Botão (ativa passagens secretas `-`)            |
+| `#`     | Armadilha (perde 1 tentativa)                   |
+| `>`     | Teleporte (leva a outro `>`)                    |
+| `X`     | Monstro aleatório                               |
+| `V`     | Monstro perseguidor (move a cada 2 turnos)      |
 
-bash
-Copiar
-Editar
+---
+
+## ⚠️ Regras
+
+- ☠️ Espinhos (`#`) → Perde 1 tentativa
+- 👾 Monstros (`X` e `V`) → Perde 1 tentativa se encostar
+- 🔑 Porta (`D`) só abre se tiver a chave (`@`)
+- 🗝️ Botões (`O`) liberam passagens escondidas (`-`)
+- 🚪 Teleportes (`>`) levam para outro teleporte do mapa
+- 🛑 Se perder as **3 tentativas**, o jogo retorna ao menu principal
+
+---
+
+## 🔧 Instalação e Execução
+
+### ✅ Pré-requisitos:
+- Compilador C (`gcc`, `clang`, `tcc` ou similar)
+- Terminal (Linux, macOS ou Windows)
+
+### 🏗️ Compilar:
+```bash
 gcc src/dungeon_crawler.c -o dungeon_crawler
-▶️ Rodar o jogo
+````
+
+### ▶️ Executar:
+
 No Linux/macOS:
 
-bash
-Copiar
-Editar
+```bash
 ./dungeon_crawler
+```
+
 No Windows:
 
-bash
-Copiar
-Editar
+```bash
 dungeon_crawler.exe
+```
+
+---
+
+## 👨‍💻 Créditos
+
+| Nome                  | Função                              |
+| --------------------- | ----------------------------------- |
+| **Vitor Lourenço**    | Desenvolvedor e Game Designer       |
+
+---
+
+## 🌟 Roadmap Futuro
+
+* ✔️ IA dos monstros (`X` e `V`) funcionando
+* ✔️ Sistema de teleporte
+* ⏳ Sistema de pontuação
+* ⏳ Animações textuais no terminal
+* ⏳ Salvamento de progresso
+* ⏳ Modo hardcore (1 tentativa apenas)
+
+---
+
+## 📜 Licença
+
+Este projeto é de **código aberto**, livre para estudo, uso, modificação e contribuições.
+Sinta-se livre para contribuir, melhorar e compartilhar!
+
+---
+
+> 🚀 Feito com muita paixão, café e várias linhas de código em C.
+
+```
